@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>机房状态</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/views.css' %}">
+</head>
+<body>
+	<div class="content">
+		<div class="item">
+			<div class="card">
+				<div class="c-header">
+					<div class="meta">当前机房</div>
+					<div class="total">{{ cityinfo.city }}</div>
+					</div>
+				<div class="c-body"></div>
+				<div class="c-footer">
+					<div class="info">
+						<span>楼层:{{ cityinfo.floor }}楼</span>
+						<span>机房:{{ cityinfo.croom }}</span>
+					</div>
+			</div>	
+			</div>
+			<div class="card">
+					<div class="c-header">
+						<div class="meta">当前机房温度</div>
+						<div class="total">{{ wendu }}°C</div>
+						</div>
+					<div class="c-body"></div>
+					<div class="c-footer">
+						<div class="info">
+                            {% if wstate == '正常' %}
+							<span>状态:{{ wstate }}</span>
+                            {% else %}
+                            <span style="color:red">状态:{{ wstate }}</span>
+                            {% endif %}
+							<span>标准:18~50°C</span>
+						</div>
+				</div>	
+			</div>
+			<div class="card">
+					<div class="c-header">
+						<div class="meta">当前机房湿度</div>
+						<div class="total">{{ shidu }}%RH</div>
+						</div>
+					<div class="c-body"></div>
+					<div class="c-footer">
+						<div class="info">
+                            {% if sstate == '正常' %}
+							<span>状态:{{ sstate }}</span>
+                            {% else %}
+                             <span style="color:red">状态:{{ sstate }}</span>
+                             <span style="color:red">状态:{{ sstate }}</span>
+                            {% endif %}
+							<span>标准:18~50°%RH</span>
+						</div>
+				</div>	
+			</div>
+			<div class="card">
+					<div class="c-header">
+						<div class="meta">今日室外温湿度</div>
+						<div class="total">25°C</div>
+						</div>
+					<div class="c-body"></div>
+					<div class="c-footer">
+						<div class="info">
+							<span>空气湿度：18~50°%RH</span>
+						</div>
+				</div>	
+			</div>
+		</div>
+		<div class="content2">
+			<div class="item2">
+				<div class="explain">
+					<h4>巡检制度:</h4>
+				</div>
+				<div class="text">
+					<p>
+						(一)	机房必须每天巡检（如遇节假日加班依然执行此规定），按事先
+						(二)	临时有事无法执行机房巡检，应协商其他员工进行巡检。<br>
+						<br>
+						(三)	必须按要求填写纸质的《机房日常巡检表》，表格应在巡检期间填写，以巡检时间为准，不得事后补填，纸质的巡检记录表必须妥善归档保存。<br>
+						<br>
+						(四)	巡检期间，发现机房物理环境异常、设备状态异常、网络或应用系统故障，应参照《机房应急操作流程》尝试恢复操作。<br>
+						<br>
+						(五)	如果故障无法自行解决，特别是当发生机房环境（动力、空调）故障、关键的设备、网络、系统、服务器如无法及时恢复时，应立即通知到相关领导，并联系相关运维组进行处理。<br>
+						<br>
+						(六)	故障处理过程必须写故障报告，以邮件形式发送主管。
+
+					</p>
+				</div>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

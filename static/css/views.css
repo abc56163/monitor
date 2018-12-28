@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color:#F0F2F5;
+
+
+}
+body,div,p,h4 {
+	background: transparent;
+}
+
+
+.content{
+	margin-top: 15px;
+	width: 1366px;
+	height: 400px;
+	position: absolute;
+
+}
+
+.item{
+	float: left;
+	width: 1249px;
+	height: 200px;
+	/*background: transparent;*/
+
+}
+
+.card{
+	width:245px;
+	height: 170px; 
+	background-color: #fff;
+	float: left;
+	margin-left: 10px;
+	padding: 20px 24px 8px;
+
+}
+.
+.c-header{
+	height: 120px;
+
+}
+
+
+
+.meta{
+	font-size: 15px;
+	color: #ABABAB;
+
+}
+
+.total{
+	width: 150px;
+	height: 80px;
+	margin-top: 20px;
+	margin-left: 50px;
+	font-size: 35px;
+
+}
+
+
+.c-body{
+
+	border: 1px solid #ABABAB;
+}
+
+.info{
+	width: 300px;
+	height: 50px;
+	margin-top:20px;
+}
+
+.info span{
+	background: transparent;
+	margin-left: 15px;
+}
+
+.content2{
+	margin-top: 220px;
+	width: 1249px;
+	height:400px;
+	position: absolute;
+
+	
+
+}
+
+.item2{
+	width: 1200px;
+	height: 400px;
+	margin-left:10px;
+	background-color: #fff;
+}
+
+.explain{
+		color: red;
+		padding: 20px;
+}
+
+.text {
+	font-size: 13px;
+	color: red;
+	margin-left: 40px;
+}

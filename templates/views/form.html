@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>机房巡检</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+</head>
+<body>
+<div class="frame">
+	<div class="write">
+		<div class="content">
+			<div class="title">
+				<h4>机房巡检表</h4>
+			</div>
+			<form action="" enctype="multipart/form-data" method="post">
+				<div class="list">
+					<div class="unit">
+						<div class="unit-h">路由器</div>
+						<div class="unit-c">
+							<label class="la1"><input type="radio" name="router" value="正常" checked="checked" >正常</label>
+							<label class="la2"><input type="radio" name="router" value=异常"">异常</label>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="unit-h">交换机</div>
+						<div class="unit-c">
+							<label><input type="radio" name="switch" value="正常" checked="checked" >正常</label>
+							<label><input type="radio" name="switch" value="异常">异常</label>
+						</div>
+					</div>
+                    <div class="unit">
+						<div class="unit-h">语音网关</div>
+						<div class="unit-c">
+							<label><input type="radio" name="server" value="正常" checked="checked">正常</label>
+							<label><input type="radio" name="server" value="异常">异常</label>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="unit-h">语音网关</div>
+						<div class="unit-c">
+							<label><input type="radio" name="gateway" value="正常" checked="checked">正常</label>
+							<label><input type="radio" name="gateway" value="异常">异常</label>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="unit-h">UPS及电源</div>
+						<div class="unit-c">
+							<label><input type="radio" name="ups" value="正常" checked="checked">正常</label>
+							<label><input type="radio" name="ups" value="异常">异常</label>
+						</div>	
+					</div>
+					<div class="unit">
+						<div class="unit-h">流控</div>
+						<div class="unit-c">
+							<label><input type="radio" name="flow" value="正常" checked="checked">正常</label>
+							<label><input type="radio" name="flow" value="异常">异常</label>
+						</div>	
+					</div>
+					<div class="unit">
+						<div class="unit-h">空调</div>
+						<div class="unit-c">
+							<label><input type="radio" name="air" value="正常" checked="checked">正常</label>
+							<label><input type="radio" name="air" value="异常">异常</label>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="unit-h">温度</div>
+						<div class="unit-c">
+							<label><input type="radio" name="temperature" value="正常" checked="checked" >正常</label>
+							<label><input type="radio" name="temperature" value="异常">异常</label>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="unit-h">湿度</div>
+						<div class="unit-c">
+							<label><input type="radio" name="humidity" value="正常" checked="checked" >正常</label>
+							<label><input type="radio" name="humidity" value="异常">异常</label>
+						</div>
+					</div>						
+				</div>
+				<div class="list2">
+					<div class="input">
+						<div class="input-title">
+							<span>日期：</span>
+						</div>
+						<div class="input-content">
+							<label><input type="text" name="time" value="{{ time }}" class="input-class"></label>
+						</div>					
+					</div>
+					<div class="input">
+						<div class="input-title">
+							<span>备注：</span>
+						</div>
+						<div class="input-content">
+							<label><input type="text" name="remark" placeholder="请输入备注" value="" class="input-class"></label>
+						</div>					
+					</div>
+					<div class="input">
+						<div class="input-title">
+							<span>巡检人：</span>
+						</div>
+						<div class="input-content">
+							<label><input type="text" name="person"  value="{{ user }}" class="input-class"></label>
+						</div>					
+					</div>
+				</div>	
+				<div class="list3">
+					<input type="submit" name="">
+				</div>			
+			</form>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

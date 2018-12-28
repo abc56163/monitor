@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>机房巡检</title>
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.ifam{
+		position: absolute;
+		width: 350px;
+		height: 250px;
+		border: 1px solid #AAAAAA;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 10px;
+
+		/*margin-top: -175px;
+		margin-left: -125px;*/
+	}
+
+	.title{
+		width: 350px;
+		height: 50px;
+		border-bottom: 1px solid #AAAAAA;
+		text-align: center;
+		line-height: 50px;
+		background-color:#F0F1F1;
+		border-top-left-radius:10px;
+		border-top-right-radius: 10px;
+
+	}
+	.content{
+		background-color:#fff;
+	}
+	.input-t{
+		float: left;
+		width: 70px;
+		/*text-align: center;*/
+		margin-top:60px;
+		margin-left: 35px;
+	}
+	.input-c{
+		float: left;
+		margin-top:60px;
+		margin-left:0px;
+	}
+
+	.input-t p{
+		margin-top: 8px;
+	}
+	.input-c p{
+		margin-top: 5px;
+	}
+	.input-c input{
+		width: 200px;
+		appearance:none;
+		-moz-appearance: none;
+		font-size:1em;
+		height:1.5em;
+		border-radius:4px;
+		border:1px solid #c8cccf;
+		color:#6a6f77;
+		outline:0;
+	}
+	.log{
+		position: absolute;
+		float: left;
+		margin-top: 140px;
+		margin-left:200px;
+	}
+
+	.log input{
+		width: 100px;
+		appearance:none;
+		-moz-appearance: none;
+		font-size:1em;
+		height:1.5em;
+		border-radius:4px;
+		border:1px solid #c8cccf;
+		color:#6a6f77;
+		outline:0;
+	}
+
+</style>
+<div>
+	<div class="ifam">
+		<div class="title">
+		<p>用户登录</p>
+		</div>
+		<div class="content">
+			<form action="/login/" method="POST">
+				<div class="input-t">
+					<p>用户:</p>
+					<p>密码:</p>
+				</div>
+				<div class="input-c" >
+					<p><input type="text" name="username"></p>
+					<p><input type="password" name="password"></p>
+				</div>
+				<div class="log">
+					<p><input type="submit" name="" value="登陆"></p>
+				</div>
+                <div style="margin-top:170px; margin-left:96px;position: absolute; ">
+					<p style="color: red;">{{ login_error }}</p>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+
+
+</div>
+</body>
+</html>

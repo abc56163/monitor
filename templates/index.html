@@ -1,0 +1,55 @@
+﻿{% load static  %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/common.css'%}">
+
+</head>
+ <body>
+<div class="nav">
+    <h1>机房巡检</h1>
+    <div class="dropdown">
+      <button class="dropbtn">{{ user }}</button>
+      <div class="dropdown-content">
+        <a href="#">密码修改</a>
+        <a href="/loginout">退出登陆</a>
+      </div>
+    </div>
+</div>
+<div class="nav_left">
+    <ul>
+        <li>
+            <a href="/main"  target="iframe">机房状态</a>
+        </li>
+        <li>
+            <a href="/form"  target="iframe">日常巡检</a>
+        </li>
+        <li>
+            <a href="/user"  target="iframe">个人中心</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="iframe" >
+      <iframe name="iframe"  width="90%" height="100%" src="/main" frameborder="0"  scrolling="no" seamless id="test" onload="this.height=500" ></iframe>
+ </div>
+
+ <script type="text/javascript">
+function reinitIframe(){
+var iframe = document.getElementById("test");
+try{
+var bHeight = iframe.contentWindow.document.body.scrollHeight;
+var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+var height = Math.max(bHeight, dHeight);
+iframe.height = height;
+console.log(height);
+}catch (ex){}
+}
+window.setInterval("reinitIframe()", 200);
+</script>
+ </body>
+</html>
+
+
